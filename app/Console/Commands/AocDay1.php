@@ -50,9 +50,9 @@ class AocDay1 extends Command
             $distance
         );
 
-        $this->info('The sum of the distances is: <options=bold;fg=red>' . array_sum(array_column($distance, 2)) . '</>');
+        $this->info('The sum of the distances is: <options=bold;fg=red>'.array_sum(array_column($distance, 2)).'</>');
 
-        $this->info('The sum of the similarity score is: <options=bold;fg=red>' . array_sum(array_column($distance, 3)). '</>');
+        $this->info('The sum of the similarity score is: <options=bold;fg=red>'.array_sum(array_column($distance, 3)).'</>');
     }
 
     private function locations($location)
@@ -66,6 +66,7 @@ class AocDay1 extends Command
         $numbers = array_map(
             function ($value) use ($location) {
                 $value = explode('   ', $value);
+
                 return (int) $value[$location];
             }, $numbers
         );
